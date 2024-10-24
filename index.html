@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .about, .projects, .contact {
+            margin: 2rem 0;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .project-card {
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        a {
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>Data Scientist | Web Developer | Creative Professional</p>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm [Your Name], a passionate data scientist with experience in [your skills]. I enjoy creating beautiful visualizations, working with geospatial data, and bringing meaningful insights to complex problems. I'm always excited to work on new projects and continuously learn.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project Title 1</h3>
+                    <p>A short description of your project. Explain what technologies you used and the challenges you overcame.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title 2</h3>
+                    <p>A short description of another project you've worked on. Showcase your skills and creativity.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me on <a href="mailto:your-email@example.com">your-email@example.com</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
