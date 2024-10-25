@@ -13,13 +13,14 @@ header {
     position: relative;
     background-color: #333;
     color: white;
-    height: 100vh;
+    height: 100vh; /* Make header fill the full viewport */
     padding: 2rem;
     display: flex;
     align-items: center; /* Center the header content vertically */
-    overflow: hidden; /* Ensure the diagonal line doesn't overflow */
+    overflow: hidden;
 }
 
+/* First Diagonal Line */
 header::before {
     content: '';
     position: absolute; /* The diagonal line stays within the header */
@@ -32,13 +33,14 @@ header::before {
     z-index: 0; /* Ensure the line is behind the content */
 }
 
+/* Align header content to the left */
 .header-content {
     position: relative;
     z-index: 1; /* Keep content above the diagonal line */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 4rem; /* Add more padding to the left side */
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 4rem;
 }
 
 /* Name styling */
@@ -130,6 +132,43 @@ header p {
 
 /* Media Query for Small Screens */
 @media (max-width: 768px) {
+    header {
+        padding: 1rem;
+        height: auto;
+        justify-content: flex-start; /* Align header content to the top-left */
+    }
+
+    .header-content {
+        align-items: flex-start;
+        padding-left: 1rem;
+        gap: 0.5rem; /* Reduce space between elements */
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column; /* Stack icons vertically */
+        align-items: flex-start; /* Align icons to the left */
+        gap: 5px;
+        margin-top: 0.5rem; /* Add slight spacing from the text */
+    }
+
+    .social-links a {
+        padding: 6px 10px; /* Smaller padding for compact layout */
+        font-size: 1.3rem; /* Make icons slightly larger */
+        background-color: transparent; /* Remove background on mobile */
+    }
+
+    /* Responsive Project Grid for Small Screens */
     .projects-grid {
         grid-template-columns: 1fr; /* One project per row */
     }
