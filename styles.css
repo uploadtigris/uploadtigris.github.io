@@ -156,10 +156,7 @@ header p {
 
     .social-links {
         display: flex;
-        flex-direction: column; /* Stack icons vertically */
-        align-items: flex-start; /* Align icons to the left */
-        gap: 5px;
-        margin-top: 0.5rem; /* Add slight spacing from the text */
+        align-items: left; /* Align icons to the left */
     }
 
     .social-links a {
