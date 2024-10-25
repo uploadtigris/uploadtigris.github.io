@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,72 +5,31 @@
     <meta name="description" content="Personal Portfolio">
     <title>Tigris Mendez | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .about, .projects, .contact {
-            margin: 2rem 0;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-        .project-card {
-            background-color: #fff;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        a {
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
 
+    <!-- Header with hamburger menu -->
     <header>
-        <h1>Tigris Mendez</h1>
-        <p>Data Analyst | UX/UI Designer | Creative Professional</p>
+        <div class="header-content">
+            <h1>Tigris Mendez</h1>
+            <p>Data Analyst | UX/UI Designer | Creative Professional</p>
+            <nav class="social-links">
+                <a href="https://github.com/uploadtigris" class="github" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/tigrismendez/" class="linkedin" target="_blank">LinkedIn</a>
+                <a href="mailto:tigris.mendez@utexas.edu" class="gmail" target="_blank">Gmail</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+        </div>
     </header>
+    
 
     <div class="container">
         <!-- About Section -->
         <section class="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Tigris Mendez, a passionate data enthusiast with a specialty in data visualization and UX/UI design. 
-                I enjoy creating beautiful visualizations, working with geospatial data, and bringing meaningful insights to complex problems. 
-                I'm always excited to work on new projects and continuously learn.</p>
+            <h2>Hello!</h2>
+            <p>I am Tigris Mendez, a passionate data enthusiast with a specialty in data visualization and UX/UI design.<br>
+My goal is to make data more accessible through beautiful illustrations.</p>
+
         </section>
 
         <!-- Projects Section -->
@@ -88,20 +46,21 @@
                     <p>A short description of another project you've worked on. Showcase your skills and creativity.</p>
                     <a href="#" target="_blank">View Project</a>
                 </div>
-                <!-- Add more project cards as needed -->
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact">
             <h2>Contact Me</h2>
-            <p>Feel free to reach out to me on <a href="mailto:your-email@example.com">your-email@example.com</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.</p>
+            <p>Feel free to reach out to me on <a href="mailto:tigris.mendez@utexas.edu">tigris.mendez@utexas.edu</a> or connect with me on <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank">LinkedIn</a>.</p>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="footer-container">
+        <p>&copy; 2024 Tigris Mendez. All Rights Reserved.</p>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>

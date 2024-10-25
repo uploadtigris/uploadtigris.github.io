@@ -1,0 +1,129 @@
+/* General Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100%;
+}
+
+/* Header styling with diagonal line */
+header {
+    position: relative;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center; /* Center the header content vertically */
+    overflow: hidden; /* Ensure the diagonal line doesn't overflow */
+}
+
+header::before {
+    content: '';
+    position: absolute; /* The diagonal line stays within the header */
+    top: 50%; /* Place the line in the middle vertically */
+    left: -25%; /* Start the line from the left */
+    width: 200%; /* Make the width wide enough to cover the header */
+    height: 2px; /* Thin line for the diagonal */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white for a subtle diagonal line */
+    transform: rotate(-45deg); /* Rotate to create diagonal */
+    z-index: 0; /* Ensure the line is behind the content */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1; /* Keep content above the diagonal line */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 4rem; /* Add more padding to the left side */
+}
+
+/* Name styling */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Social links styling */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    background-color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #777;
+    color: #fff;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Footer styling */
+.footer-container {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Container for other sections */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.about, .projects, .contact {
+    margin: 2rem 0;
+}
+
+/* Project grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
