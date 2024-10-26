@@ -193,6 +193,9 @@ header p {
         display: flex;
         gap: 10px;
     }
+    p {
+        font-size: 0.9rem; /* Adjust value as needed */
+    }
 }
 
 
