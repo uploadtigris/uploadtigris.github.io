@@ -130,12 +130,20 @@ header p {
     border-radius: 5px;
 }
 
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 /* Media Query for Small Screens */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     header {
         padding: 1rem;
         height: auto;
         justify-content: flex-start; /* Align header content to the top-left */
+        height: 100vh; /* Makes the header fill the viewport height */
     }
 
     .header-content {
@@ -169,4 +177,9 @@ header p {
     .projects-grid {
         grid-template-columns: 1fr; /* One project per row */
     }
+}
+
+/* Full-screen header for iPhone and smaller screens */
+@media (max-width: 700px) {
+    
 }
