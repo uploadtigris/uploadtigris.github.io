@@ -85,23 +85,18 @@ header p {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .social-links {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
+.main_section{
+    min-height: ;
 }
 
-/* Footer styling */
-.footer-container {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+/* Center the about section content */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text */
+    padding: 2rem;
 }
 
 /* Container for other sections */
@@ -112,8 +107,15 @@ header p {
     flex-grow: 1;
 }
 
-.about, .projects, .contact {
-    margin: 2rem 0;
+/* Center the projects section vertically within full viewport height */
+.projects {
+    min-height: 0vh; /* Makes the projects section smaller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 /* Responsive Project Grid */
@@ -135,6 +137,25 @@ header p {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* Footer styling */
+.footer-container {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 /* Media Query for Small Screens */
