@@ -128,9 +128,8 @@ header p {
 }
 
 .project-card img {
-    width: 100%;       /* Ensure image fills the container width */
-    max-height: 10rem;
-    height: auto;      /* Maintain aspect ratio */
+    width: 100%;       /* Keep the width responsive within its container */
+    height: auto;     /* Set a fixed height to ensure uniformity */
     margin-bottom: 1rem;
 }
 
