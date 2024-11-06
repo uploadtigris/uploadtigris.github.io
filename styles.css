@@ -94,6 +94,7 @@ header p {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 10rem;
 }
 
 .projects h2 {
@@ -128,11 +129,11 @@ header p {
 }
 
 .project-card img {
-    width: 100%;       /* Ensure image fills the container width */
-    max-height: 10rem;
-    height: auto;      /* Maintain aspect ratio */
+    width: 40rem;       /* Keep the width responsive within its container */
+    height: auto;     /* Set a fixed height to ensure uniformity */
     margin-bottom: 1rem;
 }
+
 
 .footer-container {
     background-color: #333;
