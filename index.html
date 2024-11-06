@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +18,7 @@
     <header>
         <div class="header-content">
             <h1>Tigris Mendez</h1>
-            <p>Data Analyst | UX/UI Designer | Creative Professional</p>
+            <p>GIS Web Developer</p>
             <nav class="social-links">
                 <a href="https://github.com/uploadtigris" class="github" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/tigrismendez/" class="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -25,33 +29,35 @@
 
     <div class="container">
         <!-- About Section -->
-        <section class="about">
-            <h2>Hello!</h2>
-            <p>I am Tigris Mendez, a passionate data enthusiast with a specialty in data visualization and UX/UI design. My goal is to make data more accessible through beautiful illustrations.</p>
-        </section>
+        <div class="welcome-message">
+            <section class="about">
+                <h2>hello!</h2>
+                <p>I am Tigris Mendez, a dedicated GIS and web developer, specializing in creating dynamic, data-driven applications. My mission is to enhance spatial data accessibility and user experience through intuitive web solutions and interactive maps.</p>
+            </section>
+        </div>
 
         <!-- Projects Section -->
         <section class="projects">
-            <h2>My Projects</h2>
+            <h2>projects</h2>
             <div class="projects-grid">
-                <a href="https://github.com/uploadtigris/JPN_Automotive_Trends" target="_blank" class="project-card">
-                    <img src="images/vecteezy_tiger-head-logo-mascot_44300291.png" alt="Japanese Automotive Trends" class="project-image">
-                    <h3>Japanese Automotive Trends</h3>
-                    <p>Building Exploratory Data Analysis Skills</p>
+                <a href="https://example.com/project1" target="_blank" class="project-card">
+                    <img src="nihon_go.png" alt="Nihon-go Image">
+                    <h3>Nihon-go!</h3>
+                    <p>A short description of your project. Explain what technologies you used and the challenges you overcame.</p>
                 </a>
-                <a href="https://codepen.io/uploadtigris/pen/WNdwdVz" target="_blank" class="project-card">
-                    <img src="images/vecteezy_tiger-head-logo-mascot_44300291.png" alt="Survey Practice" class="project-image">
-                    <h3>Survey Practice</h3>
-                    <p>Practicing making a survey. I learned some cool CSS skills!</p>
+                <a href="https://example.com/project2" target="_blank" class="project-card">
+                    <img src="https://via.placeholder.com/150" alt="Project 1 Image">
+                    <h3>Google UX Course Project 1</h3>
+                    <p>A short description of your project. Showcase your skills and creativity.</p>
                 </a>
                 <!-- Add more project cards as needed -->
             </div>
         </section>
     </div>
+
     <!-- Footer -->
     <footer class="footer-container">
         <p>&copy; 2024 Tigris Mendez. All Rights Reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
