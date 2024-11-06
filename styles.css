@@ -70,10 +70,23 @@ header p {
     gap: 5rem;
 }
 
-.about {
-    margin-top: 10rem;
-    max-width: 75%;
+.welcome-message {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally within the parent container */
+    align-items: center;
+    text-align: center; /* Centers the text */
 }
+
+.about {
+    margin-top: 3rem;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    text-align: center;  /* Centers the text within the section */
+}
+
+
 
 .projects {
     display: flex;
@@ -81,7 +94,11 @@ header p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 3rem;
+}
+
+.projects h2 {
+    margin-bottom: 2rem;
+
 }
 
 .projects-grid {
@@ -98,7 +115,6 @@ header p {
     background-color: #fff;
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     text-decoration: none;
     color: inherit;
@@ -112,9 +128,9 @@ header p {
 }
 
 .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%;       /* Ensure image fills the container width */
+    max-height: 10rem;
+    height: auto;      /* Maintain aspect ratio */
     margin-bottom: 1rem;
 }
 
