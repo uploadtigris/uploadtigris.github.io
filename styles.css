@@ -25,6 +25,7 @@ header {
     position: relative;
     z-index: 1;
     display: flex;
+    flex: 1
     flex-direction: column;
     align-items: flex-start;
 }
@@ -58,6 +59,18 @@ header p {
     background-color: #777;
     color: #fff;
 }
+
+.globe-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.globe-icon {
+    font-size: 100px; /* Adjust size as needed */
+    color: #007bff; /* Choose an appropriate color */
+    }
 
 .container {
     min-height: 100vh;
