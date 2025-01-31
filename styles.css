@@ -60,18 +60,6 @@ header p {
     color: #fff;
 }
 
-.globe-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-.globe-icon {
-    font-size: 100px; /* Adjust size as needed */
-    color: #007bff; /* Choose an appropriate color */
-    }
-
 .container {
     min-height: 100vh;
     max-width: 1000px;
