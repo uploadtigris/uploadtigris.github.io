@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="styles.css"></noscript>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,49 +9,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <!-- Header with hamburger menu -->
     <header>
         <div class="header-content">
+            <div class="headshot-container">
+                <img src="headshot.JPG" alt="Tigris Mendez Professional Headshot">
+            </div>
             <h1>Tigris Mendez</h1>
-            <p>Analytics, GIS, Development</p>
+            <p>Data Analytics, GIS, Development</p>
             <nav class="social-links">
-                <a href="https://github.com/uploadtigris" class="github" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/tigrismendez/" class="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:tigris.mendez@utexas.edu" class="gmail" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/uploadtigris" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tigris.mendez@utexas.edu" target="_blank"><i class="fas fa-envelope"></i></a>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <!-- About Section -->
-        <div class="welcome-message">
-            <section class="about">
-                <h2>hello!</h2>
-                <p>I am Tigris Mendez, a dedicated GIS and web developer, specializing in creating dynamic, data-driven applications. My mission is to enhance spatial data accessibility and user experience through intuitive web solutions and interactive maps.</p>
-            </section>
-        </div>
+        <section class="about">
+            <h2>Hello!</h2>
+            <p>I am Tigris Mendez, a dedicated GIS and Data Analyst with a passion for making better data-backed decisions.</p>
+        </section>
 
-        <!-- Projects Section -->
         <section class="projects">
-            <h2>projects</h2>
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
             <div class="projects-grid">
-                <a href="https://github.com/uploadtigris/Nihon-GO" target="_blank" class="project-card">
-                    <img src="nihon_go.png" alt="Nihon-go Image">
-                    <h3>Nihon-go!</h3>
-                    <p>A travel planner for Japan Tourists. Written in Vanilla HTML, CSS, JavaScript.</p>
+                <a href="#" class="project-card">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800" alt="Solar Panel Analysis">
+                    </div>
+                    <h3>Site Selection for High-Voltage Solar Panels</h3>
+                    <p>Identifying optimal locations for solar panel installation across the US using geospatial analysis and machine learning.</p>
                 </a>
-                <a href="https://github.com/uploadtigris/RealEstateQuery" target="_blank" class="project-card">
-                    <img src="realestatequery.png" alt="Project 1 Image">
-                    <h3>Real Estate Query *Coming Soon*</h3>
-                    <p>A website to help buyers, sellers, and agents vizualize the data they need to see.</p>
+
+                <a href="#" class="project-card">
+                    <div class="image-container">
+                        <img src="https://plus.unsplash.com/premium_photo-1681426710520-7c56c9f563d2?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inventory management dashboard interface">
+                    </div>
+                    <h3>Inventory Control Management Database</h3>
+                    <p>SQL-powered inventory system with predictive analytics for stock optimization and supplier management.</p>
+                </a>                
+
+                <a href="#" class="project-card">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800" alt="Customer Analytics">
+                    </div>
+                    <h3>Customer Retention Analysis</h3>
+                    <p>Machine learning models predicting customer churn with 89% accuracy using behavioral data patterns.</p>
                 </a>
-                <!-- Add more project cards as needed -->
+
+                <a href="#" class="project-card">
+                    <div class="image-container">
+                        <img src="https://images.pexels.com/photos/8864103/pexels-photo-8864103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Construction workers inspecting safety gear">                   
+                    </div>
+                    <h3>Construction Accident Predictions</h3>
+                    <p>Risk assessment system using computer vision and historical data to prevent worksite accidents.</p>
+                </a>                
+
+                <a href="#" class="project-card">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800" alt="AI Chatbot Interface">
+                    </div>
+                    <h3>Automated Customer Service Chatbot</h3>
+                    <p>NLP-powered support solution reducing response time by 70% using transformer models.</p>
+                </a>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer class="footer-container">
         <p>&copy; 2024 Tigris Mendez. All Rights Reserved.</p>
     </footer>
