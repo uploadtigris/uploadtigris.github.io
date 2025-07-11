@@ -188,7 +188,7 @@ header p {
 @media (max-width: 768px) {
     header {
         padding: 1rem;
-        min-height: 90vh;
+        min-height: 100vh;
     }
 
     .header-content {
@@ -206,7 +206,7 @@ header p {
     }
 
     header p {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .social-links {
