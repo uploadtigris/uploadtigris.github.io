@@ -13,7 +13,7 @@ header {
     position: relative;
     background-color: #333;
     color: white;
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -33,12 +33,14 @@ header {
 }
 
 .headshot-container {
+    position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2rem;
     border: 3px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
 }
 
 .headshot-container img {
