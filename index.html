@@ -137,12 +137,40 @@
                     <p>Field notes and scripts from real Linux, Windows, and networking troubleshooting.</p>
                 </a>
 
-                <a href="https://github.com/uploadtigris/my_home_lab/blob/main/docs/services/PiHole.md" class="project-card" target="_blank">
-                    <div class="image-container">
-                        <img src="https://raw.githubusercontent.com/uploadtigris/my_home_lab/main/images/what-is-dns.png" alt="Pi-Hole DNS Filtering">
+                <a href="https://github.com/uploadtigris/wazuh-siem-homelab" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                        <span class="card-status status-planned">Planned</span>
                     </div>
-                    <h3>Pi-Hole</h3>
-                    <p>Network-wide ad blocking through DNS filtering and domain-level traffic control. A home-lab exercise in network security and observability.</p>
+                    <h3>Wazuh SIEM &amp; XDR Homelab</h3>
+                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (S3 + SQS with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
+                    <div class="tags">
+                        <span>Wazuh</span><span>Docker</span><span>Ansible</span><span>Terraform</span><span>MITRE ATT&amp;CK</span><span>AWS</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/hardened-image-pipeline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Hardened Linux Golden-Image Pipeline</h3>
+                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
+                    <div class="tags">
+                        <span>Packer</span><span>Ansible</span><span>CIS</span><span>OpenSCAP</span><span>Linux</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/network-segmentation-ids" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-3">
+                        <i class="fas fa-network-wired"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Segmented Network &amp; Intrusion Detection Lab</h3>
+                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
+                    <div class="tags">
+                        <span>Suricata</span><span>VLAN</span><span>OPNsense</span><span>Wazuh</span><span>Networking</span>
+                    </div>
                 </a>
 
             </div>
@@ -178,6 +206,14 @@
                     </div>
                     <h3>Solar Panel Sites</h3>
                     <p>A data-visualization-heavy Python project investigating ideal solar panel site locations across the U.S.A.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/my_home_lab/blob/main/docs/services/PiHole.md" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/uploadtigris/my_home_lab/main/images/what-is-dns.png" alt="Pi-Hole DNS Filtering">
+                    </div>
+                    <h3>Pi-Hole</h3>
+                    <p>Network-wide ad blocking through DNS filtering and domain-level traffic control. A home-lab exercise in network security and observability.</p>
                 </a>
 
             </div>
