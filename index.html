@@ -3,121 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio">
-    <title>Tigris Mendez | Portfolio</title>
+    <meta name="description" content="Tigris Mendez, Cloud Security Engineer. Defensive cloud engineering: AWS hardening, security posture, detection and remediation, and AI-assisted findings triage.">
+    <title>Tigris Mendez | Cloud Security Engineer</title>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=3443&format=png&color=FFFFFF">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="headshot-container">
-                <img src="headshot.JPG" alt="Tigris Mendez Professional Headshot">
+                <img src="attachments/headshot.JPG" alt="Tigris Mendez Professional Headshot">
             </div>
             <h1>Tigris Mendez</h1>
-            <p>Web App Developer | IT Professional</p>
+            <p class="title-line">Cloud Security Engineer</p>
+            <p class="tagline">Defensive cloud engineering: hardening, posture, detection, and remediation.</p>
             <nav class="social-links">
-                <a href="https://github.com/uploadtigris" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/uploadtigris" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </nav>
         </div>
     </header>
 
     <div class="container">
         <section class="about">
-            <h2>Hi!</h2>
-            <strong>I build user-centered web applications with a focus on clarity and accessibility.</strong>
-            <p>With a background in IT Support and Data Analysis, I advocate for intuitive design and seamless user experiences.</p>
-            <p>My development philosophy prioritizes simplicity, scalability, and maintainability.</p>
+            <h2>About</h2>
+            <strong>I build and harden cloud environments with security as a first-class concern.</strong>
+            <p>I'm an IT Support Associate transitioning into cloud security, with hands-on experience across Linux, networking, and AWS. My focus is defensive engineering: I take misconfigured or unhardened environments and systematically secure them with least-privilege IAM, encrypted storage, segmented networks, continuous posture monitoring, and automated remediation.</p>
+            <p>For every control I implement, I document the <em>before-risk</em>, the <em>change</em>, and the <em>residual risk</em>. Security work is only trustworthy when the reasoning behind it is written down and reviewable.</p>
         </section>
 
+        <!-- Certifications / Roadmap -->
+        <section class="certs">
+            <div class="section-title">
+                <h2>Certifications &amp; Roadmap</h2>
+                <p class="section-sub">A deliberate path toward Cloud Security Engineering across Linux, Cloud, Security, and AI.</p>
+            </div>
+            <div class="cert-track">
+                <a href="https://aws.amazon.com/certification/certified-ai-practitioner/" class="cert-card in-progress" target="_blank">
+                    <i class="fas fa-robot cert-icon"></i>
+                    <h3>AWS AI Practitioner</h3>
+                    <span class="cert-status status-progress">In Progress</span>
+                </a>
+                <a href="https://www.comptia.org/certifications/linux" class="cert-card planned" target="_blank">
+                    <i class="fab fa-linux cert-icon"></i>
+                    <h3>CompTIA Linux+</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-cloudops-engineer-associate/" class="cert-card planned" target="_blank">
+                    <i class="fas fa-cloud cert-icon"></i>
+                    <h3>AWS CloudOps</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-security-specialty/" class="cert-card planned" target="_blank">
+                    <i class="fas fa-shield-halved cert-icon"></i>
+                    <h3>AWS Security Specialty</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured: Cloud Security Projects -->
         <section class="projects">
             <div class="section-title">
-                <h2>< projects ></h2>
+                <h2>Cloud Security Engineering</h2>
+                <p class="section-sub">A connected arc of defensive projects spanning Linux, Cloud, Security, and AI. The documented fixes are the portfolio, not the vulnerabilities.</p>
             </div>
-            <div class="projects-grid"> 
+            <div class="projects-grid">
 
-                <a href="https://github.com/uploadtigris/Nihon-GO" class="project-card">
+                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-lock"></i>
+                        <span class="card-status status-progress">In Progress</span>
+                    </div>
+                    <h3>Secure-by-Design AWS Baseline</h3>
+                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. Each step documents the before-risk, the change, and the residual risk.</p>
+                    <div class="tags">
+                        <span>Terraform</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/aws-detect-remediate" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-bolt"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Detection &amp; Automated Remediation</h3>
+                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The write-up explains which findings I auto-remediate, why, and the failure modes of getting it wrong.</p>
+                    <div class="tags">
+                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>Python</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/ai-findings-triage" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-3">
+                        <i class="fas fa-brain"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>AI-Powered Findings Triage</h3>
+                    <p>A Lambda using Amazon Bedrock (Claude) to summarize noisy GuardDuty and Security Hub findings into plain English, prioritize them, explain gnarly IAM policies and CloudTrail event chains, and post enriched alerts to Slack. A lightweight React triage dashboard is served from S3 + CloudFront.</p>
+                    <div class="tags">
+                        <span>Bedrock</span><span>Lambda</span><span>React</span><span>CloudFront</span><span>Slack</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Foundations: Linux & Networking -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Foundations: Linux &amp; Networking</h2>
+                <p class="section-sub">The systems groundwork behind the cloud security work.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/sysadmin_handbook" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="attachments/linux_in_jail.jpg" alt="Linux Systems Administration">
+                    </div>
+                    <h3>Sysadmin Handbook</h3>
+                    <p>Field notes and scripts from real Linux, Windows, and networking troubleshooting.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/my_home_lab/blob/main/docs/services/PiHole.md" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/uploadtigris/my_home_lab/main/images/what-is-dns.png" alt="Pi-Hole DNS Filtering">
+                    </div>
+                    <h3>Pi-Hole</h3>
+                    <p>Network-wide ad blocking through DNS filtering and domain-level traffic control. A home-lab exercise in network security and observability.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Legacy Projects -->
+        <section class="projects legacy">
+            <div class="section-title">
+                <h2>Legacy Projects</h2>
+                <p class="section-sub">Earlier work in web and data, kept for context and provenance.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/Nihon-GO" class="project-card" target="_blank">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800" alt="Japan Travel Planner">
                     </div>
                     <h3>Nihon-GO</h3>
-                    <p>An interactive web-based travel planner interface designed for exploring and planning trips to Japan.</p>
+                    <p>An interactive web-based travel planner interface for exploring and planning trips to Japan.</p>
                 </a>
 
-                <a href="https://github.com/uploadtigris/austin_traffic_report" class="project-card">
+                <a href="https://github.com/uploadtigris/austin_traffic_report" class="project-card" target="_blank">
                     <div class="image-container">
                         <img src="https://i.imgflip.com/3us008.jpg?auto=format&fit=crop&w=800" alt="Austin Traffic Report">
                     </div>
                     <h3>Austin Traffic Report</h3>
-                    <p>View trends in the last 1,000 reported traffic incidents in Austin, Texas</p>
+                    <p>View trends in the last 1,000 reported traffic incidents in Austin, Texas.</p>
                 </a>
 
-                <a href="https://github.com/uploadtigris/Solar-Panel-Sites" class="project-card">
+                <a href="https://github.com/uploadtigris/Solar-Panel-Sites" class="project-card" target="_blank">
                     <div class="image-container">
                         <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800" alt="Solar Panel Analysis">
                     </div>
                     <h3>Solar Panel Sites</h3>
-                    <p>A data visualization heavy Python-based project to investigate ideal solar panel site locations across the U.S.A.</p>
+                    <p>A data-visualization-heavy Python project investigating ideal solar panel site locations across the U.S.A.</p>
                 </a>
 
-                <a href="https://github.com/uploadtigris/sysadmin_handbook" class="project-card">
-                    <div class="image-container">
-                        <img src="linux_in_jail.jpg?auto=format&fit=crop&w=200" alt="Bash Icon">
-                   </div>
-                    <h3>Sysadmin Handbook</h3>
-                    <p>Field notes and scripts from real Linux, Windows, and networking troubleshooting</p>
-                </a>
-
-                <a href="https://github.com/uploadtigris/my_home_lab/blob/main/docs/services/PiHole.md" class="project-card">
-                    <div class="image-container">
-                        <img src="https://raw.githubusercontent.com/uploadtigris/my_home_lab/main/images/what-is-dns.png" alt="Pi-Hole">
-                    </div>
-                    <h3>Pi-Hole</h3>
-                    <p>My implementation of Pi-hole for network-wide ad blocking through DNS filtering and domain-level traffic control.</p>
-                </a>
-            
             </div>
         </section>
     </div>
 
     <footer class="footer-container">
-        <p>&copy; 2026 Tigris Mendez</p>
+        <p>&copy; 2026 Tigris Mendez. Cloud Security Engineer.</p>
+        <nav class="footer-links">
+            <a href="https://github.com/uploadtigris" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank">LinkedIn</a>
+        </nav>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
