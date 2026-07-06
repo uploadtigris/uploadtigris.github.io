@@ -277,6 +277,12 @@ header h1 {
     margin: 0 auto;
 }
 
+/* Keep lone/few cards card-sized and centered instead of stretching full width */
+.tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+    justify-content: center;
+}
+
 .project-card {
     background-color: var(--surface);
     padding: 1.5rem;
