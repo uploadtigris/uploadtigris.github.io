@@ -213,6 +213,33 @@ header h1 {
     text-decoration: none;
     color: inherit;
     display: block;
+    position: relative;
+}
+
+.cert-num {
+    position: absolute;
+    top: 0.7rem;
+    left: 0.7rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.cert-card.completed .cert-num {
+    color: #16a34a;
+    border-color: rgba(22, 163, 74, 0.35);
+}
+
+.cert-card.in-progress .cert-num {
+    color: var(--accent);
+    border-color: rgba(45, 212, 191, 0.45);
 }
 
 .cert-card:hover {
