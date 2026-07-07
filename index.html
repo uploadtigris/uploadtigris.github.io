@@ -80,57 +80,10 @@
             </div>
         </section>
 
-        <!-- Featured: Cloud Security Projects -->
+        <!-- Foundations: Linux & Networking Security -->
         <section class="projects">
             <div class="section-title">
-                <h2>Cloud Security Engineering</h2>
-                <p class="section-sub">A connected arc of defensive projects spanning Linux, Cloud, Security, and AI. The documented fixes are the portfolio, not the vulnerabilities.</p>
-            </div>
-            <div class="projects-grid">
-
-                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-1">
-                        <i class="fas fa-lock"></i>
-                        <span class="card-status status-progress">In Progress</span>
-                    </div>
-                    <h3>Secure-by-Design AWS Baseline</h3>
-                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. Each step documents the before-risk, the change, and the residual risk.</p>
-                    <div class="tags">
-                        <span>Terraform</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/uploadtigris/detection_and_automated_remediation" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-2">
-                        <i class="fas fa-bolt"></i>
-                        <span class="card-status status-planned">Planned</span>
-                    </div>
-                    <h3>Detection &amp; Automated Remediation</h3>
-                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The write-up explains which findings I auto-remediate, why, and the failure modes of getting it wrong.</p>
-                    <div class="tags">
-                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>Python</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/uploadtigris/AI_powered_findings" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-3">
-                        <i class="fas fa-brain"></i>
-                        <span class="card-status status-planned">Planned</span>
-                    </div>
-                    <h3>AI-Powered Findings Triage</h3>
-                    <p>A Lambda using Amazon Bedrock (Claude) to summarize noisy GuardDuty and Security Hub findings into plain English, prioritize them, explain gnarly IAM policies and CloudTrail event chains, and post enriched alerts to Slack. A lightweight React triage dashboard is served from S3 + CloudFront.</p>
-                    <div class="tags">
-                        <span>Bedrock</span><span>Lambda</span><span>React</span><span>CloudFront</span><span>Slack</span>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Foundations: Linux & Networking -->
-        <section class="projects">
-            <div class="section-title">
-                <h2>Foundations: Linux &amp; Networking</h2>
+                <h2>Foundations: Linux, Networking &amp; Security</h2>
                 <p class="section-sub">The systems groundwork behind the cloud security work.</p>
             </div>
             <div class="projects-grid">
@@ -168,6 +121,53 @@
                     <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
                     <div class="tags">
                         <span>Suricata</span><span>VLAN</span><span>OPNsense</span><span>Wazuh</span><span>Networking</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Featured: Cloud Security Projects -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Cloud Security Engineering</h2>
+                <p class="section-sub">A connected arc of defensive projects spanning Linux, Cloud, Security, and AI. The documented fixes are the portfolio, not the vulnerabilities.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-lock"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Secure-by-Design AWS Baseline</h3>
+                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. Each step documents the before-risk, the change, and the residual risk.</p>
+                    <div class="tags">
+                        <span>Terraform</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/detection_and_automated_remediation" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-bolt"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Detection &amp; Automated Remediation</h3>
+                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The write-up explains which findings I auto-remediate, why, and the failure modes of getting it wrong.</p>
+                    <div class="tags">
+                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>Python</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/AI_powered_findings" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-3">
+                        <i class="fas fa-brain"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>AI-Powered Findings Triage</h3>
+                    <p>A Lambda using Amazon Bedrock (Claude) to summarize noisy GuardDuty and Security Hub findings into plain English, prioritize them, explain gnarly IAM policies and CloudTrail event chains, and post enriched alerts to Slack. A lightweight React triage dashboard is served from S3 + CloudFront.</p>
+                    <div class="tags">
+                        <span>Bedrock</span><span>Lambda</span><span>React</span><span>CloudFront</span><span>Slack</span>
                     </div>
                 </a>
 
