@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tigris Mendez, AWS Cloud Support Engineer. Troubleshooting AWS infrastructure across Linux, networking, and cloud — backed by hands-on security and automation projects.">
+    <meta name="description" content="Tigris Mendez, AWS Cloud Support Engineer. Troubleshooting AWS infrastructure across Linux, networking, and cloud, backed by hands-on security and automation projects.">
     <title>Tigris Mendez | AWS Cloud Support Engineer</title>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=3443&format=png&color=FFFFFF">
@@ -29,9 +29,9 @@
     <div class="container">
         <section class="about">
             <h2>About</h2>
-            <strong>I diagnose and resolve infrastructure issues across Linux, networking, and AWS — and bring a security engineer's instincts to root-cause analysis.</strong>
+            <strong>I diagnose and resolve infrastructure issues across Linux, networking, and AWS, and bring a security engineer's instincts to root-cause analysis.</strong>
             <p>I'm an IT Support Associate moving into cloud support, with a track record of methodical troubleshooting: reproduce the problem, isolate the cause, apply the fix, verify it holds. My AWS work spans IAM, networking, storage, and compute, and hands-on detection/hardening projects give me visibility into why systems fail, not just how to patch them.</p>
-            <p>For every issue I resolve, I document the <em>symptom</em>, <em>root cause</em>, and <em>fix</em>. A resolution is only trustworthy if the reasoning behind it is written down and reviewable — which is exactly what a good case note or runbook should do.</p>
+            <p>For every issue I resolve, I document the <em>symptom</em>, <em>root cause</em>, and <em>fix</em>. A resolution is only trustworthy if the reasoning behind it is written down and reviewable, which is exactly what a good case note or runbook should do.</p>
         </section>
 
         <!-- Certifications / Roadmap -->
@@ -100,7 +100,7 @@
                         <span class="card-status status-progress">In Progress</span>
                     </div>
                     <h3>Wazuh SIEM &amp; XDR Homelab</h3>
-                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (S3 + SQS with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. This also means I can quickly diagnose why an alert fired or why a log stopped flowing — a troubleshooting skill that transfers directly to support case work. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
+                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (S3 + SQS with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. This also means I can quickly diagnose why an alert fired or why a log stopped flowing, a troubleshooting skill that transfers directly to support case work. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
                     <div class="tags">
                         <span>Wazuh</span><span>Docker</span><span>Ansible</span><span>Terraform</span><span>MITRE ATT&amp;CK</span><span>AWS</span>
                     </div>
@@ -112,7 +112,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Hardened Linux Golden-Image Pipeline</h3>
-                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The same discipline — reproduce, isolate, fix, verify — applies directly to diagnosing why a misconfigured instance is failing a health check. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
+                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The same discipline (reproduce, isolate, fix, verify) applies directly to diagnosing why a misconfigured instance is failing a health check. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
                     <div class="tags">
                         <span>Packer</span><span>Ansible</span><span>CIS</span><span>OpenSCAP</span><span>Linux</span>
                     </div>
@@ -124,7 +124,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Segmented Network &amp; Intrusion Detection Lab</h3>
-                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. It's also good practice for the kind of connectivity troubleshooting — tracing a blocked flow through the right zone and rule — that comes up constantly in support tickets. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
+                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. It's also good practice for the kind of connectivity troubleshooting (tracing a blocked flow through the right zone and rule) that comes up constantly in support tickets. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
                     <div class="tags">
                         <span>Suricata</span><span>VLAN</span><span>OPNsense</span><span>Wazuh</span><span>Networking</span>
                     </div>
