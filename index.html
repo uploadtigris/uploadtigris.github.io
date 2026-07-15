@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tigris Mendez, AWS Cloud Support Engineer. Troubleshooting AWS infrastructure across Linux, networking, and cloud, backed by hands-on security and automation projects.">
-    <title>Tigris Mendez | AWS Cloud Support Engineer</title>
+    <meta name="description" content="Tigris Mendez, AWS Cloud Engineer. Building and automating AWS infrastructure across Linux, networking, and cloud, backed by hands-on infrastructure-as-code projects.">
+    <title>Tigris Mendez | AWS Cloud Engineer</title>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=3443&format=png&color=FFFFFF">
     <link rel="stylesheet" href="styles.css">
@@ -17,8 +17,8 @@
                 <img src="attachments/headshot.JPG" alt="Tigris Mendez Professional Headshot">
             </div>
             <h1>Tigris Mendez</h1>
-            <p class="title-line">AWS Cloud Support Engineer</p>
-            <p class="tagline">Troubleshooting AWS infrastructure end-to-end, with security fundamentals baked in.</p>
+            <p class="title-line">AWS Cloud Engineer</p>
+            <p class="tagline">Designing and automating AWS infrastructure end-to-end, with security fundamentals baked in.</p>
             <nav class="social-links">
                 <a href="https://github.com/uploadtigris" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -29,16 +29,16 @@
     <div class="container">
         <section class="about">
             <h2>About</h2>
-            <strong>I diagnose and resolve infrastructure issues across Linux, networking, and AWS, and bring a security engineer's instincts to root-cause analysis.</strong>
-            <p>I'm an IT Support Associate moving into cloud support, with a track record of methodical troubleshooting: reproduce the problem, isolate the cause, apply the fix, verify it holds. My AWS work spans IAM, networking, storage, and compute, and hands-on detection/hardening projects give me visibility into why systems fail, not just how to patch them.</p>
-            <p>For every issue I resolve, I document the <em>symptom</em>, <em>root cause</em>, and <em>fix</em>. A resolution is only trustworthy if the reasoning behind it is written down and reviewable, which is exactly what a good case note or runbook should do.</p>
+            <strong>I build and automate AWS infrastructure, from IAM policy to CI/CD-ready image pipelines, with a security engineer's eye for what can go wrong.</strong>
+            <p>I'm an IT Support Associate moving into cloud engineering, with hands-on experience across Linux, networking, and AWS. My focus is infrastructure as code: I use Terraform, Ansible, and Packer to turn manual, one-off configuration into repeatable, version-controlled systems, and I build automation that reacts to events instead of waiting for a person to notice them.</p>
+            <p>For every system I build, I document the <em>before-state</em>, the <em>change</em>, and the <em>residual risk</em>. Infrastructure is only trustworthy when the reasoning behind it is written down and reviewable, whether that's a Terraform plan, a runbook, or a pull request.</p>
         </section>
 
         <!-- Certifications / Roadmap -->
         <section class="certs">
             <div class="section-title">
                 <h2>Certifications &amp; Roadmap</h2>
-                <p class="section-sub">A deliberate path toward Cloud Support, with Cloud Security Engineering as the long-term destination.</p>
+                <p class="section-sub">A deliberate path toward Cloud Engineering, building AWS depth from operations through automation, with security as a differentiator along the way.</p>
             </div>
             <div class="cert-track">
                 <div class="cert-card completed">
@@ -71,16 +71,28 @@
                     <h3>AWS Certified CloudOps Engineer - Associate</h3>
                     <span class="cert-status status-planned">Planned</span>
                 </a>
-                <a href="https://aws.amazon.com/certification/certified-security-specialty/" class="cert-card planned" target="_blank">
+                <a href="https://aws.amazon.com/certification/certified-developer-associate/" class="cert-card planned" target="_blank">
                     <span class="cert-num">6</span>
-                    <i class="fas fa-shield-halved cert-icon"></i>
-                    <h3>AWS Security Specialty</h3>
+                    <i class="fas fa-code cert-icon"></i>
+                    <h3>AWS Certified Developer - Associate</h3>
                     <span class="cert-status status-planned">Planned</span>
                 </a>
-                <a href="https://skillbuilder.aws/learn/UQWKF19DT7/aws-incident-response-demonstrated/VH96JY5RJZ" class="cert-card planned" target="_blank">
+                <a href="https://developer.hashicorp.com/certifications/infrastructure-automation" class="cert-card planned" target="_blank">
                     <span class="cert-num">7</span>
-                    <i class="fas fa-triangle-exclamation cert-icon"></i>
-                    <h3>AWS Incident Response Demonstrated</h3>
+                    <i class="fas fa-cubes cert-icon"></i>
+                    <h3>HashiCorp Terraform Associate</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-devops-engineer-professional/" class="cert-card planned" target="_blank">
+                    <span class="cert-num">8</span>
+                    <i class="fas fa-infinity cert-icon"></i>
+                    <h3>AWS Certified DevOps Engineer - Professional</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-security-specialty/" class="cert-card planned" target="_blank">
+                    <span class="cert-num">9</span>
+                    <i class="fas fa-shield-halved cert-icon"></i>
+                    <h3>AWS Security Specialty</h3>
                     <span class="cert-status status-planned">Planned</span>
                 </a>
             </div>
@@ -90,7 +102,7 @@
         <section class="projects">
             <div class="section-title">
                 <h2>Foundations: Linux, Networking &amp; Security</h2>
-                <p class="section-sub">The systems groundwork behind the support and security work.</p>
+                <p class="section-sub">The systems groundwork behind the infrastructure and automation work.</p>
             </div>
             <div class="projects-grid">
 
@@ -100,7 +112,7 @@
                         <span class="card-status status-progress">In Progress</span>
                     </div>
                     <h3>Wazuh SIEM &amp; XDR Homelab</h3>
-                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (S3 + SQS with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. This also means I can quickly diagnose why an alert fired or why a log stopped flowing, a troubleshooting skill that transfers directly to support case work. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
+                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (S3 + SQS with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. The whole stack is defined and deployed as code rather than clicked together by hand, so standing it up again elsewhere is a rerun, not a rebuild. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
                     <div class="tags">
                         <span>Wazuh</span><span>Docker</span><span>Ansible</span><span>Terraform</span><span>MITRE ATT&amp;CK</span><span>AWS</span>
                     </div>
@@ -112,7 +124,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Hardened Linux Golden-Image Pipeline</h3>
-                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The same discipline (reproduce, isolate, fix, verify) applies directly to diagnosing why a misconfigured instance is failing a health check. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
+                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The pipeline itself is the point: a clean, versioned base image any team can build from, rather than a one-off box someone hardened by hand. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
                     <div class="tags">
                         <span>Packer</span><span>Ansible</span><span>CIS</span><span>OpenSCAP</span><span>Linux</span>
                     </div>
@@ -124,7 +136,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Segmented Network &amp; Intrusion Detection Lab</h3>
-                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. It's also good practice for the kind of connectivity troubleshooting (tracing a blocked flow through the right zone and rule) that comes up constantly in support tickets. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
+                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, instrumented with Suricata for network intrusion detection. Suricata alerts feed the Wazuh SIEM for correlation, mirroring the VPC segmentation and flow-log analysis in the cloud projects. Designing the zones and policy from scratch is good practice for the same segmentation decisions that shape a VPC: what talks to what, and what shouldn't. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
                     <div class="tags">
                         <span>Suricata</span><span>VLAN</span><span>OPNsense</span><span>Wazuh</span><span>Networking</span>
                     </div>
@@ -136,8 +148,8 @@
         <!-- Featured: Cloud Security Projects -->
         <section class="projects">
             <div class="section-title">
-                <h2>Cloud Security Engineering</h2>
-                <p class="section-sub">A connected arc of defensive projects spanning Linux, Cloud, Security, and AI. The documented fixes are the portfolio, not the vulnerabilities.</p>
+                <h2>Cloud Infrastructure &amp; Automation</h2>
+                <p class="section-sub">A connected arc of infrastructure-as-code and automation projects spanning Linux, Cloud, and AI. The repeatable builds are the portfolio, not just the code.</p>
             </div>
             <div class="projects-grid">
 
@@ -147,7 +159,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Secure-by-Design AWS Baseline</h3>
-                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. It doubles as a reference architecture I can point to when troubleshooting why a customer's environment doesn't match best practice. Each step documents the before-risk, the change, and the residual risk.</p>
+                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. It's designed to be stood up in a new account with a single apply, which is the actual test of whether infrastructure as code is done right. Each step documents the before-risk, the change, and the residual risk.</p>
                     <div class="tags">
                         <span>Terraform</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
                     </div>
@@ -159,7 +171,7 @@
                         <span class="card-status status-planned">Planned</span>
                     </div>
                     <h3>Detection &amp; Automated Remediation</h3>
-                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. Understanding failure modes here is exactly the muscle needed to root-cause a case instead of just reacting to it. The write-up explains which findings I auto-remediate, why, and the failure modes of getting it wrong.</p>
+                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The underlying pattern (an event triggers a Lambda, which takes action) generalizes to almost any operational response worth automating, not just security findings. The write-up explains which findings I auto-remediate, why, and the failure modes of getting it wrong.</p>
                     <div class="tags">
                         <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>Python</span>
                     </div>
@@ -264,7 +276,7 @@
     </div>
 
     <footer class="footer-container">
-        <p>&copy; 2026 Tigris Mendez. AWS Cloud Support Engineer.</p>
+        <p>&copy; 2026 Tigris Mendez. AWS Cloud Engineer.</p>
         <nav class="footer-links">
             <a href="https://github.com/uploadtigris" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank">LinkedIn</a>
