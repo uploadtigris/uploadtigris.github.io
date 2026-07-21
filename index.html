@@ -86,53 +86,6 @@
             </div>
         </section>
 
-        <!-- Featured: Cloud Infrastructure & Automation -->
-        <section class="projects">
-            <div class="section-title">
-                <h2>Cloud Infrastructure &amp; Automation</h2>
-                <p class="section-sub">A connected arc of infrastructure-as-code and automation projects spanning Linux, Cloud, and AI. The repeatable builds are the portfolio, not just the code.</p>
-            </div>
-            <div class="projects-grid">
-
-                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-1">
-                        <i class="fas fa-lock"></i>
-                        <span class="card-status status-planned">Planned</span>
-                    </div>
-                    <h3>Secure-by-Design AWS Baseline</h3>
-                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. A GitHub Actions pipeline runs checkov and tflint to catch insecure or malformed infrastructure, then terraform plan on every pull request and a gated terraform apply on merge, so changes are validated, reviewed, and shipped the same way application code is. It's designed to be stood up in a new account with a single apply, which is the actual test of whether infrastructure as code is done right. Each step documents the before-risk, the change, and the residual risk.</p>
-                    <div class="tags">
-                        <span>Terraform</span><span>GitHub Actions</span><span>CI/CD</span><span>Checkov</span><span>tflint</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/uploadtigris/aws-ha-web-service" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-2">
-                        <i class="fas fa-server"></i>
-                        <span class="card-status status-planned">Planned</span>
-                    </div>
-                    <h3>Highly Available Web Service</h3>
-                    <p>A live workload that has to stay up, not just a locked-down empty account. Terraform deploys an Application Load Balancer in front of an Auto Scaling Group running a small containerized app on the aws-secure-baseline account. CloudWatch dashboards and alarms track health, latency, and saturation, with SNS notifications on breach. A scripted load test drives traffic until the ASG scales out, then eases off to show it scale back in and a failed instance get replaced with no downtime. This is the reliability half of cloud engineering: keeping something running under load, not just standing it up.</p>
-                    <div class="tags">
-                        <span>ALB</span><span>Auto Scaling</span><span>CloudWatch</span><span>SNS</span><span>Terraform</span><span>Load Testing</span>
-                    </div>
-                </a>
-
-                <a href="https://github.com/uploadtigris/detection_and_automated_remediation" class="project-card featured" target="_blank">
-                    <div class="icon-header gradient-2">
-                        <i class="fas fa-bolt"></i>
-                        <span class="card-status status-planned">Planned</span>
-                    </div>
-                    <h3>Detection &amp; Automated Remediation</h3>
-                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The underlying pattern (an event triggers a Lambda, which takes action) generalizes to almost any operational response worth automating, not just security findings. To prove that reach, the same pattern drives cost governance: AWS Budgets and Cost Anomaly Detection feed a Lambda that flags untagged or oversized resources and posts to Slack, so spend surprises surface the same way security findings do. The write-up explains which events I auto-remediate, why, and the failure modes of getting it wrong.</p>
-                    <div class="tags">
-                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>AWS Budgets</span><span>Cost Governance</span><span>Slack</span><span>Python</span>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
         <!-- Foundations: Linux & Networking Security -->
         <section class="projects">
             <div class="section-title">
@@ -174,6 +127,53 @@
                     <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, built as hands-on practice for the same segmentation decisions that shape a VPC: what talks to what, and what shouldn't. Designing the zones and policy from scratch mirrors the VPC segmentation and flow-log analysis in the cloud projects. Suricata then instruments the network for intrusion detection, feeding alerts to the Wazuh SIEM for correlation as the secondary payoff. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
                     <div class="tags">
                         <span>VPC</span><span>VLAN</span><span>OPNsense</span><span>Suricata</span><span>Wazuh</span><span>Networking</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Featured: Cloud Infrastructure & Automation -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Cloud Infrastructure &amp; Automation</h2>
+                <p class="section-sub">A connected arc of infrastructure-as-code and automation projects spanning Linux, Cloud, and AI. The repeatable builds are the portfolio, not just the code.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-lock"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Secure-by-Design AWS Baseline</h3>
+                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. A GitHub Actions pipeline runs checkov and tflint to catch insecure or malformed infrastructure, then terraform plan on every pull request and a gated terraform apply on merge, so changes are validated, reviewed, and shipped the same way application code is. It's designed to be stood up in a new account with a single apply, which is the actual test of whether infrastructure as code is done right. Each step documents the before-risk, the change, and the residual risk.</p>
+                    <div class="tags">
+                        <span>Terraform</span><span>GitHub Actions</span><span>CI/CD</span><span>Checkov</span><span>tflint</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/aws-ha-web-service" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-server"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Highly Available Web Service</h3>
+                    <p>A live workload that has to stay up, not just a locked-down empty account. Terraform deploys an Application Load Balancer in front of an Auto Scaling Group running a small containerized app on the aws-secure-baseline account. CloudWatch dashboards and alarms track health, latency, and saturation, with SNS notifications on breach. A scripted load test drives traffic until the ASG scales out, then eases off to show it scale back in and a failed instance get replaced with no downtime. This is the reliability half of cloud engineering: keeping something running under load, not just standing it up.</p>
+                    <div class="tags">
+                        <span>ALB</span><span>Auto Scaling</span><span>CloudWatch</span><span>SNS</span><span>Terraform</span><span>Load Testing</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/detection_and_automated_remediation" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-bolt"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Detection &amp; Automated Remediation</h3>
+                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The underlying pattern (an event triggers a Lambda, which takes action) generalizes to almost any operational response worth automating, not just security findings. To prove that reach, the same pattern drives cost governance: AWS Budgets and Cost Anomaly Detection feed a Lambda that flags untagged or oversized resources and posts to Slack, so spend surprises surface the same way security findings do. The write-up explains which events I auto-remediate, why, and the failure modes of getting it wrong.</p>
+                    <div class="tags">
+                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>AWS Budgets</span><span>Cost Governance</span><span>Slack</span><span>Python</span>
                     </div>
                 </a>
 
