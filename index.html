@@ -10,26 +10,38 @@
     <h2>Security focused Developer</h2>
         <p>I focus on robust solutions and <b>limit</b> my use of AI.</p>
     <h3>Projects</h3>
+
     <h4>1. Self-hosted identity provider (OAuth2/OIDC + MFA)</h4>
         <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
         <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
-        <p>A real authorization server implementing OAuth2 and OIDC protocols with multi-factor authentication.</p>
-        <p>Stack: Go, Postgres for users/tokens, Redis for session/refresh-token state.</p>
-        <p>Key Features: Argon2id password hashing, refresh token rotation with reuse detection, short-lived JWTs, TOTP-based MFA, rate limiting on auth endpoints, structured audit logs.</p>
+        <ul>
+            <li><i>A real authorization server implementing OAuth2 and OIDC protocols with multi-factor authentication.</i></li>
+            <li>Stack: Go, Postgres for users/tokens, Redis for session/refresh-token state.</li>
+            <li>Key Features: Argon2id password hashing, refresh token rotation with reuse detection, short-lived JWTs, TOTP-based MFA, rate limiting on auth endpoints, structured audit logs.</li>
+        </ul>
+
     <h4>2. Encrypted secrets management service (mini Vault)</h4>
         <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
         <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
-        <p>An API-drive store: put/get secrets, encrypted at rest, versioned, access controlled per token.</p>
-        <p>Stack: Go, SQLite, envelope encryption (data key wrapped by a master key) 
-        <p>Key Features: Envelope encryption, per-secret access policies, sort-lived leased tokens, full audit trail on every read/write, rotation support.</p>
+        <ul>
+            <li><i>An API-driven store: put/get secrets, encrypted at rest, versioned, access controlled per token.</i></li>
+            <li>Stack: Go, SQLite, envelope encryption (data key wrapped by a master key)</li>
+            <li>Key Features: Envelope encryption, per-secret access policies, short-lived leased tokens, full audit trail on every read/write, rotation support.</li>
+        </ul>
+
     <h4>3. Honeypot with live attack telemetry dashboard</h4>
         <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
         <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
-        <p>A system designed to detect and analyze real-time cyber attacks, providing insights through a centralized dashboard.</p>
-        <p>Stack: Go for the listener, websockets for live dashboard updates, MySQL for time-series data storage.</p>
-        <p>Key Features: Real-time monitoring, automated alerting, comprehensive reporting, and integration with existing security tools.</p>
+        <ul>
+            <li><i>A system designed to detect and analyze real-time cyber attacks, providing insights through a centralized dashboard.</i></li>
+            <li>Stack: Go for the listener, websockets for live dashboard updates, MySQL for time-series data storage.</li>
+            <li>Key Features: Real-time monitoring, automated alerting, comprehensive reporting, and integration with existing security tools.</li>
+        </ul>
+        
+    
     <h3>Education</h3>
-        <p>University of Texas at Austin - Bachelor of Science in  Economics</p>
-        <p>University of Texas at Austin - Certificate in Computer Science</p>
+        <ul>
+            <li>University of Texas at Austin - Bachelor of Science in  Economics & Certificate in Computer Science</li>
+        </ul>
 </body>
 </html>
