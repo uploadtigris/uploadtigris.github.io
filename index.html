@@ -3,45 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Tigris Mendez, AWS Cloud Engineer. Building and automating AWS infrastructure across Linux, networking, and cloud, backed by hands-on infrastructure-as-code projects.">
+    <title>Tigris Mendez | Cloud Engineer</title>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=3443&format=png&color=FFFFFF">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body style="background-color:rgb(102, 197, 102);">
-    <h1>Tigris Mendez</h1>
-    <h2>Security focused Developer</h2>
-        <p>I focus on robust solutions and <b>limit</b> my use of AI.</p>
-    <h3>Projects</h3>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="headshot-container">
+                <img src="attachments/headshot.JPG" alt="Tigris Mendez Professional Headshot">
+            </div>
+            <h1>Tigris Mendez</h1>
+            <p class="title-line">Cloud Engineer</p>
+            <p class="tagline">Designing and automating AWS infrastructure end-to-end, with security fundamentals baked in.</p>
+            <nav class="social-links">
+                <a href="https://github.com/uploadtigris" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </nav>
+        </div>
+    </header>
 
-    <h4>1. Self-hosted identity provider (OAuth2/OIDC + MFA)</h4>
-        <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
-        <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
-        <ul>
-            <li><i>A real authorization server implementing OAuth2 and OIDC protocols with multi-factor authentication.</i></li>
-            <li>Stack: Go, Postgres for users/tokens, Redis for session/refresh-token state.</li>
-            <li>Key Features: Argon2id password hashing, refresh token rotation with reuse detection, short-lived JWTs, TOTP-based MFA, rate limiting on auth endpoints, structured audit logs.</li>
-        </ul>
+    <div class="container">
+        <section class="about">
+            <h2>About</h2>
+            <strong>I build and automate AWS infrastructure, from IAM policy to CI/CD-ready image pipelines, with a security engineer's eye for what can go wrong.</strong>
+            <p>I'm an IT Support Associate moving into cloud engineering, with hands-on experience across Linux, networking, and AWS. My focus is infrastructure as code: I use Terraform, Ansible, and Packer to turn manual, one-off configuration into repeatable, version-controlled systems, and I build automation that reacts to events instead of waiting for a person to notice them.</p>
+            <p>For every system I build, I document the <em>before-state</em>, the <em>change</em>, and the <em>residual risk</em>. Infrastructure is only trustworthy when the reasoning behind it is written down and reviewable, whether that's a Terraform plan, a runbook, or a pull request.</p>
+        </section>
 
-    <h4>2. Encrypted secrets management service (mini Vault)</h4>
-        <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
-        <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
-        <ul>
-            <li><i>An API-driven store: put/get secrets, encrypted at rest, versioned, access controlled per token.</i></li>
-            <li>Stack: Go, SQLite, envelope encryption (data key wrapped by a master key)</li>
-            <li>Key Features: Envelope encryption, per-secret access policies, short-lived leased tokens, full audit trail on every read/write, rotation support.</li>
-        </ul>
+        <!-- Certifications / Roadmap -->
+        <section class="certs">
+            <div class="section-title">
+                <h2>Certifications &amp; Roadmap</h2>
+                <p class="section-sub">A deliberate path toward Cloud Engineering, building AWS depth from operations through automation, with security as a differentiator along the way.</p>
+            </div>
+            <div class="cert-track">
+                <div class="cert-card completed">
+                    <span class="cert-num">1</span>
+                    <i class="fas fa-graduation-cap cert-icon"></i>
+                    <h3>UT Austin Elements of Computing Certificate</h3>
+                    <span class="cert-status status-complete">Completed</span>
+                </div>
+                <a href="https://www.credly.com/badges/bd6017e9-8bb5-421f-9ac5-75dd5a37a3a4" class="cert-card completed" target="_blank">
+                    <span class="cert-num">2</span>
+                    <i class="fas fa-user-shield cert-icon"></i>
+                    <h3>CompTIA Security+</h3>
+                    <span class="cert-status status-complete">Completed</span>
+                </a>
+                <a href="https://www.credly.com/badges/d05a1cf5-d2f4-45af-a395-6a4624c75b3d/public_url" class="cert-card completed" target="_blank">
+                    <span class="cert-num">3</span>
+                    <i class="fas fa-robot cert-icon"></i>
+                    <h3>AWS AI Practitioner</h3>
+                    <span class="cert-status status-complete">Completed</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" class="cert-card in-progress" target="_blank">
+                    <span class="cert-num">4</span>
+                    <i class="fas fa-cloud cert-icon"></i>
+                    <h3>AWS Solutions Architect Associate</h3>
+                    <span class="cert-status status-progress">In Progress</span>
+                </a>
+                <a href="https://developer.hashicorp.com/certifications/infrastructure-automation" class="cert-card planned" target="_blank">
+                    <span class="cert-num">5</span>
+                    <i class="fas fa-cubes cert-icon"></i>
+                    <h3>HashiCorp Terraform Associate</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+                <a href="https://aws.amazon.com/certification/certified-security-specialty/" class="cert-card planned" target="_blank">
+                    <span class="cert-num">6</span>
+                    <i class="fas fa-shield-halved cert-icon"></i>
+                    <h3>AWS Certified Security - Specialty</h3>
+                    <span class="cert-status status-planned">Planned</span>
+                </a>
+            </div>
+        </section>
 
-    <h4>3. Honeypot with live attack telemetry dashboard</h4>
-        <a href="https://github.com/uploadtigris" target="_blank">Demo</a>
-        <a href="https://github.com/uploadtigris" target="_blank">Documentation</a>
-        <ul>
-            <li><i>A system designed to detect and analyze real-time cyber attacks, providing insights through a centralized dashboard.</i></li>
-            <li>Stack: Go for the listener, websockets for live dashboard updates, MySQL for time-series data storage.</li>
-            <li>Key Features: Real-time monitoring, automated alerting, comprehensive reporting, and integration with existing security tools.</li>
-        </ul>
-        
-    
-    <h3>Education</h3>
-        <ul>
-            <li>University of Texas at Austin - Bachelor of Science in  Economics & Certificate in Computer Science</li>
-        </ul>
+        <!-- Foundations: Linux & Networking Security -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Foundations: Linux, Networking &amp; Security</h2>
+                <p class="section-sub">The systems groundwork behind the infrastructure and automation work.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/wazuh-siem-homelab" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                        <span class="card-status status-progress">In Progress</span>
+                    </div>
+                    <h3>Wazuh SIEM &amp; XDR Homelab</h3>
+                    <p>A self-hosted Wazuh SIEM/XDR stack, deployed with Docker Compose and configured through Ansible. Agents on hardened Linux hosts provide file integrity monitoring, CIS security configuration assessment, and detection rules mapped to MITRE ATT&amp;CK. Terraform provisions the AWS-side log delivery (an SQS queue with scoped IAM) so the same SIEM ingests CloudTrail and GuardDuty from the aws-secure-baseline account: one correlation point for on-prem and cloud. The whole stack is defined and deployed as code rather than clicked together by hand, so standing it up again elsewhere is a rerun, not a rebuild. This also means I can pinpoint why a log stopped flowing or an integration silently broke, the same troubleshooting reflex that keeps a cloud environment observable, not just secure. The write-up covers rule tuning, false-positive triage, and what I alert on versus suppress.</p>
+                    <div class="tags">
+                        <span>Wazuh</span><span>Docker</span><span>Ansible</span><span>Terraform</span><span>IaC</span><span>MITRE ATT&amp;CK</span><span>AWS</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/hardened-image-pipeline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="card-status status-progress">In Progress</span>
+                    </div>
+                    <h3>Hardened Linux Golden-Image Pipeline</h3>
+                    <p>A repeatable image-hardening pipeline: Packer builds the base image, Ansible applies CIS benchmark controls, and OpenSCAP scores compliance before and after. The pipeline itself is the point: a clean, versioned base image any team can build from, rather than a one-off box someone hardened by hand. The same Ansible role hardens EC2 in aws-secure-baseline, and Wazuh continuously verifies the result at runtime. Each control documents the before-risk, the change, and the residual risk, including the controls I deliberately skip and why.</p>
+                    <div class="tags">
+                        <span>Packer</span><span>Ansible</span><span>CIS</span><span>OpenSCAP</span><span>Linux</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/network-segmentation-ids" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-3">
+                        <i class="fas fa-network-wired"></i>
+                        <span class="card-status status-progress">In Progress</span>
+                    </div>
+                    <h3>Segmented Network &amp; Intrusion Detection Lab</h3>
+                    <p>A segmented home network, with management, trusted, IoT, and quarantine zones enforced with VLANs and firewall policy, built as hands-on practice for the same segmentation decisions that shape a VPC: what talks to what, and what shouldn't. Designing the zones and policy from scratch mirrors the VPC segmentation and flow-log analysis in the cloud projects. Suricata then instruments the network for intrusion detection, feeding alerts to the Wazuh SIEM for correlation as the secondary payoff. The write-up documents the segmentation policy, the threat each boundary mitigates, and proof that key detections fire against generated test traffic.</p>
+                    <div class="tags">
+                        <span>VPC</span><span>VLAN</span><span>OPNsense</span><span>Suricata</span><span>Wazuh</span><span>Networking</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Featured: Cloud Infrastructure & Automation -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Cloud Infrastructure &amp; Automation</h2>
+                <p class="section-sub">A connected arc of infrastructure-as-code and automation projects spanning Linux, Cloud, and AI. The repeatable builds are the portfolio, not just the code.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/aws-secure-baseline" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-1">
+                        <i class="fas fa-lock"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Secure-by-Design AWS Baseline</h3>
+                    <p>A Terraform-deployed landing zone done right: least-privilege IAM, CloudTrail + Config + GuardDuty + Security Hub enabled, encrypted S3, and a segmented VPC. Ansible then hardens EC2 to CIS benchmarks. A GitHub Actions pipeline runs checkov and tflint to catch insecure or malformed infrastructure, then terraform plan on every pull request and a gated terraform apply on merge, so changes are validated, reviewed, and shipped the same way application code is. It's designed to be stood up in a new account with a single apply, which is the actual test of whether infrastructure as code is done right. Each step documents the before-risk, the change, and the residual risk.</p>
+                    <div class="tags">
+                        <span>Terraform</span><span>GitHub Actions</span><span>CI/CD</span><span>Checkov</span><span>tflint</span><span>Ansible</span><span>IAM</span><span>CIS</span><span>VPC</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/aws-ha-web-service" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-server"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Highly Available Web Service</h3>
+                    <p>A live workload that has to stay up, not just a locked-down empty account. Terraform deploys an Application Load Balancer in front of an Auto Scaling Group running a small containerized app on the aws-secure-baseline account. CloudWatch dashboards and alarms track health, latency, and saturation, with SNS notifications on breach. A scripted load test drives traffic until the ASG scales out, then eases off to show it scale back in and a failed instance get replaced with no downtime. This is the reliability half of cloud engineering: keeping something running under load, not just standing it up.</p>
+                    <div class="tags">
+                        <span>ALB</span><span>Auto Scaling</span><span>CloudWatch</span><span>SNS</span><span>Terraform</span><span>Load Testing</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uploadtigris/detection_and_automated_remediation" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-bolt"></i>
+                        <span class="card-status status-planned">Planned</span>
+                    </div>
+                    <h3>Detection &amp; Automated Remediation</h3>
+                    <p>An EventBridge and Lambda pipeline that reacts to findings. A public S3 bucket triggers auto-remediation, alongside detection rules for root-account usage, console logins from new locations, and security-group changes. The underlying pattern (an event triggers a Lambda, which takes action) generalizes to almost any operational response worth automating, not just security findings. To prove that reach, the same pattern drives cost governance: AWS Budgets and Cost Anomaly Detection feed a Lambda that flags untagged or oversized resources and posts to Slack, so spend surprises surface the same way security findings do. The write-up explains which events I auto-remediate, why, and the failure modes of getting it wrong.</p>
+                    <div class="tags">
+                        <span>EventBridge</span><span>Lambda</span><span>GuardDuty</span><span>AWS Budgets</span><span>Cost Governance</span><span>Slack</span><span>Python</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Useful Scripts & Tools -->
+        <section class="projects">
+            <div class="section-title">
+                <h2>Useful Scripts &amp; Tools</h2>
+                <p class="section-sub">A growing toolbox of scripts and utilities I build and reach for in day-to-day work. More will land here over time.</p>
+            </div>
+            <div class="projects-grid tools-grid">
+
+                <a href="https://github.com/uploadtigris/linux-automation" class="project-card featured" target="_blank">
+                    <div class="icon-header gradient-2">
+                        <i class="fas fa-terminal"></i>
+                        <span class="card-status status-complete">Ongoing</span>
+                    </div>
+                    <h3>Linux Automation</h3>
+                    <p>Bash and Python scripts for Linux system administration and automation.</p>
+                    <div class="tags">
+                        <span>Bash</span><span>Python</span><span>Linux</span><span>Automation</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Legacy Projects -->
+        <section class="projects legacy">
+            <div class="section-title">
+                <h2>Legacy Projects</h2>
+                <p class="section-sub">Earlier work in web and data, kept for context and provenance.</p>
+            </div>
+            <div class="projects-grid">
+
+                <a href="https://github.com/uploadtigris/project_CloudChef" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/uploadtigris/project_CloudChef/main/images/cloudchef.jpg" alt="CloudChef Cloud Application Rebuild">
+                    </div>
+                    <h3>CloudChef</h3>
+                    <p>A cloud-native rebuild of the ChefTec application: containerized frontend and backend, Terraform Infrastructure-as-Code, Ansible provisioning, and CI/CD, with user management and separate dev and prod environments.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/hydroponics_sensing" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800" alt="Hydroponics Lab Sensing">
+                    </div>
+                    <h3>Hydroponics Sensing</h3>
+                    <p>Sensor telemetry for a hydroponics lab, capturing temperature, humidity, pressure, and light, with AWS IoT Core integration for data storage. Early hands-on AWS work from before the security pivot.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/Nihon-GO" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800" alt="Japan Travel Planner">
+                    </div>
+                    <h3>Nihon-GO</h3>
+                    <p>An interactive web-based travel planner interface for exploring and planning trips to Japan.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/austin_traffic_report" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://i.imgflip.com/3us008.jpg?auto=format&fit=crop&w=800" alt="Austin Traffic Report">
+                    </div>
+                    <h3>Austin Traffic Report</h3>
+                    <p>View trends in the last 1,000 reported traffic incidents in Austin, Texas.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/Solar-Panel-Sites" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800" alt="Solar Panel Analysis">
+                    </div>
+                    <h3>Solar Panel Sites</h3>
+                    <p>A data-visualization-heavy Python project investigating ideal solar panel site locations across the U.S.A.</p>
+                </a>
+
+                <a href="https://github.com/uploadtigris/my_home_lab/blob/main/docs/services/PiHole.md" class="project-card" target="_blank">
+                    <div class="image-container">
+                        <img src="https://raw.githubusercontent.com/uploadtigris/my_home_lab/main/images/what-is-dns.png" alt="Pi-Hole DNS Filtering">
+                    </div>
+                    <h3>Pi-Hole</h3>
+                    <p>Network-wide ad blocking through DNS filtering and domain-level traffic control. A home-lab exercise in network security and observability.</p>
+                </a>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-container">
+        <p>&copy; 2026 Tigris Mendez. AWS Cloud Engineer.</p>
+        <nav class="footer-links">
+            <a href="https://github.com/uploadtigris" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank">LinkedIn</a>
+        </nav>
+    </footer>
 </body>
 </html>
