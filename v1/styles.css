@@ -11,27 +11,6 @@
     --border: #e2e8f0;
     --shadow: 0 10px 30px rgba(11, 28, 51, 0.08);
     --shadow-hover: 0 18px 40px rgba(11, 28, 51, 0.16);
-    --icon: #0b1c33;        /* default certificate icon color */
-    --chip-bg: #eef2f7;     /* tags and "planned" badges */
-    --chip-ink: #0b1c33;
-    --planned-ink: #475569;
-    color-scheme: light;
-}
-
-/* Dark theme: set by the toggle button (and the visitor's system preference) */
-:root[data-theme="dark"] {
-    --bg: #0a111d;
-    --surface: #111b2c;
-    --ink: #e7edf7;
-    --ink-soft: #9fb0c8;
-    --border: #243350;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.55);
-    --icon: #cfe3ff;
-    --chip-bg: #1a2740;
-    --chip-ink: #cfe3ff;
-    --planned-ink: #b4c2d8;
-    color-scheme: dark;
 }
 
 /* ===== Base ===== */
@@ -45,11 +24,6 @@ body, html {
     color: var(--ink);
     min-height: 100%;
     line-height: 1.6;
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    body, html, .cert-card, .project-card { transition: none; }
 }
 
 h1, h2, h3 { letter-spacing: -0.01em; }
@@ -282,7 +256,7 @@ header h1 {
 
 .cert-icon {
     font-size: 1.8rem;
-    color: var(--icon);
+    color: var(--navy);
     margin-bottom: 0.75rem;
 }
 
@@ -320,8 +294,8 @@ header h1 {
 }
 
 .status-planned {
-    color: var(--planned-ink);
-    background: var(--chip-bg);
+    color: #475569;
+    background: #eef2f7;
     border-color: var(--border);
 }
 
@@ -434,8 +408,8 @@ header h1 {
 .tags span {
     font-size: 0.72rem;
     font-weight: 600;
-    color: var(--chip-ink);
-    background: var(--chip-bg);
+    color: var(--navy);
+    background: #eef2f7;
     border: 1px solid var(--border);
     padding: 0.22rem 0.6rem;
     border-radius: 6px;
@@ -468,69 +442,6 @@ header h1 {
 }
 
 .footer-links a:hover { text-decoration: underline; }
-
-/* ===== Theme switch (sun / moon slider) ===== */
-.theme-switch {
-    position: fixed;
-    top: 28px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    width: 68px;
-    height: 36px;
-    padding: 0;
-    display: block;
-    background: var(--chip-bg);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    box-shadow: var(--shadow);
-    cursor: pointer;
-    transition: background-color 0.25s ease, border-color 0.25s ease;
-}
-
-.theme-switch .thumb {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    transition: transform 0.25s ease;
-}
-
-:root[data-theme="dark"] .theme-switch .thumb { transform: translateX(32px); }
-
-.theme-switch i {
-    position: absolute;
-    top: 3px;
-    width: 28px;
-    height: 28px;
-    display: grid;
-    place-items: center;
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-    z-index: 1;
-    pointer-events: none;
-    transition: color 0.25s ease;
-}
-
-.theme-switch .fa-sun { left: 3px; }
-.theme-switch .fa-moon { right: 3px; }
-
-/* the icon sitting on the thumb is the active mode */
-:root[data-theme="light"] .theme-switch .fa-sun,
-:root[data-theme="dark"] .theme-switch .fa-moon { color: #0b1c33; }
-
-.theme-switch:focus-visible {
-    outline: 3px solid var(--accent-2);
-    outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .theme-switch, .theme-switch .thumb, .theme-switch i { transition: none; }
-}
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {

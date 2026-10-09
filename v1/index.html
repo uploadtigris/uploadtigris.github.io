@@ -7,27 +7,10 @@
     <title>Tigris Mendez | Network Technician</title>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=3443&format=png&color=FFFFFF">
-    <script>
-        /* Set the theme before the page paints, so there is no flash.
-           A saved choice wins; otherwise follow the system setting. */
-        (function () {
-            var t = null;
-            try { t = localStorage.getItem('theme'); } catch (e) {}
-            if (t !== 'dark' && t !== 'light') {
-                t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-            }
-            document.documentElement.setAttribute('data-theme', t);
-        })();
-    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <button id="theme-toggle" class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Toggle dark mode">
-        <i class="fas fa-sun" aria-hidden="true"></i>
-        <i class="fas fa-moon" aria-hidden="true"></i>
-        <span class="thumb" aria-hidden="true"></span>
-    </button>
     <header>
         <div class="header-content">
             <div class="headshot-container">
@@ -178,34 +161,5 @@
             <a href="https://www.linkedin.com/in/tigrismendez/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
-    <script>
-        (function () {
-            var root = document.documentElement;
-            var btn = document.getElementById('theme-toggle');
-            function saved() {
-                try { var t = localStorage.getItem('theme'); return (t === 'dark' || t === 'light') ? t : null; } catch (e) { return null; }
-            }
-            function sync() {
-                btn.setAttribute('aria-checked', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
-            }
-            btn.addEventListener('click', function () {
-                var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                root.setAttribute('data-theme', next);
-                try { localStorage.setItem('theme', next); } catch (e) {}
-                sync();
-            });
-            /* With no saved choice, keep following the system setting live. */
-            var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-            if (mq && mq.addEventListener) {
-                mq.addEventListener('change', function (e) {
-                    if (saved() === null) {
-                        root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-                        sync();
-                    }
-                });
-            }
-            sync();
-        })();
-    </script>
 </body>
 </html>
