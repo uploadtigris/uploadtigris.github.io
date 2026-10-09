@@ -31,7 +31,7 @@
         <section class="about">
             <h2>About</h2>
             <b>I troubleshoot networks for a living and build them for fun. As an IT Support Associate at Amazon I support 5,000+ users, and the problems I like best are the network ones: VPN routing conflicts, DNS failures, devices that can't find their domain.</b>
-            <p>At home I run a small rack with a pfSense firewall, a managed PoE switch, a multi-SSID access point and a Pi-hole DNS server. I'm currently segmenting it into Management, Trusted, IoT, Guest and Server VLANs, with firewall rules that say exactly who can talk to whom.</p>
+            <p>At home I run a small rack with a pfSense firewall, a managed PoE switch, a multi-SSID access point and a Pi-hole DNS server. I've segmented it into Management, Trusted, IoT, Guest and Server VLANs, with firewall rules that say exactly who can talk to whom, and I tested them from the restricted side.</p>
             <p>I hold CompTIA Security+, so I design with security in mind, and I'm studying for the CCNA. I document every fix the same way: what broke, how I found it, what I changed, and what I'd watch next time.</p>
         </section>
 
@@ -80,12 +80,12 @@
                 <a href="https://github.com/uploadtigris/network-segmentation-ids" class="project-card featured" target="_blank">
                     <div class="icon-header gradient-1">
                         <i class="fas fa-network-wired"></i>
-                        <span class="card-status status-progress">In Progress &middot; Build Oct 2026</span>
+                        <span class="card-status status-complete">Completed &middot; Oct 2026</span>
                     </div>
                     <h3>Segmented Home Network (VLANs + pfSense)</h3>
-                    <p>Segmenting my home network into five VLANs on a pfSense firewall, a Netgear GS308EP managed switch and a TP-Link EAP610 access point: Management, Trusted, IoT, Guest and Servers, each on its own /24 (10.0.VLAN.0). The switch trunks tagged VLANs to pfSense and the AP; each SSID maps to its own VLAN, so IoT gear and guests never share a broadcast domain with my own devices. Inter-VLAN traffic is default-deny, with written exceptions such as "every VLAN may reach Pi-hole on port 53". The write-up covers the design, the port map, and the problems I hit on the way.</p>
+                    <p>I segmented my home network into five VLANs on a pfSense firewall, a Netgear GS308EP managed switch and a TP-Link EAP610 access point: Management, Trusted, IoT, Guest and Servers, each on its own /24 (10.0.VLAN.0). The switch trunks tagged VLANs to pfSense and the AP, and each SSID maps to its own VLAN, so IoT gear and guests never share a broadcast domain with my own devices. Every VLAN gets least-privilege rules: Trusted and IoT must use Pi-hole for DNS, direct DNS to public resolvers is blocked, and the firewall, switch and AP admin pages are reachable only from a wired management port. I tested the rules from the restricted side (10 of 10 passed) and wrote up the design, the port map, and 13 problems I hit on the way.</p>
                     <div class="tags">
-                        <span>VLAN / 802.1Q</span><span>pfSense</span><span>Inter-VLAN routing</span><span>DHCP</span><span>Firewall rules</span><span>Wi-Fi (multi-SSID)</span><span>PoE</span>
+                        <span>VLAN / 802.1Q</span><span>pfSense</span><span>Inter-VLAN routing</span><span>DHCP</span><span>Firewall rules</span><span>Wi-Fi (multi-SSID)</span><span>PKI / TLS</span><span>PoE</span>
                     </div>
                 </a>
 
@@ -95,7 +95,7 @@
                         <span class="card-status status-complete">Running</span>
                     </div>
                     <h3>Pi-hole Network DNS</h3>
-                    <p>A Raspberry Pi running Pi-hole as the DNS server for my home network, filtering ads and trackers for every device. When the Pi lost its static address after a reboot and DNS stopped resolving, I found it with an nmap ping sweep, pinned its address, and wrote up the fix. After the VLAN build, Pi-hole serves DNS to every VLAN from the Servers segment.</p>
+                    <p>A Raspberry Pi running Pi-hole as the DNS server for my home network, filtering ads and trackers for every device. When the Pi lost its static address after a reboot and DNS stopped resolving, I found it with an nmap ping sweep, pinned its address, and wrote up the fix. It now runs in the Servers VLAN and serves DNS to the Mgmt, Trusted and IoT networks, with firewall rules forcing Trusted and IoT through it. Guests use their own gateway.</p>
                     <div class="tags">
                         <span>DNS</span><span>Pi-hole</span><span>DHCP reservations</span><span>nmap</span><span>Raspberry Pi</span>
                     </div>
@@ -115,10 +115,10 @@
                 <a href="https://github.com/uploadtigris/wazuh-siem-homelab" class="project-card featured" target="_blank">
                     <div class="icon-header gradient-1">
                         <i class="fas fa-magnifying-glass-chart"></i>
-                        <span class="card-status status-progress">In Progress</span>
+                        <span class="card-status status-planned">Rebuild planned &middot; Oct 2026</span>
                     </div>
                     <h3>Wazuh SIEM Homelab</h3>
-                    <p>A self-hosted Wazuh SIEM in Docker with agents on my Linux and macOS machines for file-integrity monitoring and CIS configuration checks. Next: feeding it alerts from a Suricata sensor on the segmented network.</p>
+                    <p>A self-hosted Wazuh SIEM in Docker that I ran once, with agents on my Linux and macOS machines for file-integrity monitoring and CIS configuration checks. The first build no longer runs. I'm rebuilding it on my home server so it also collects pfSense firewall logs and Pi-hole DNS queries from the segmented network.</p>
                     <div class="tags">
                         <span>Wazuh</span><span>Docker</span><span>Linux</span><span>macOS</span><span>CIS</span><span>FIM</span>
                     </div>
